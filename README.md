@@ -33,7 +33,6 @@ Rules:
 - After **.9**, the next release increments the major version (**2.0**)
 ---
 - There is no `.10`
----
 
 ## License
 

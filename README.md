@@ -75,6 +75,9 @@ Linux:
 
 Guide WIP (sorry)
 
+## Bugs
+- Auto update checker
+
 ## Development (Linux only right now)
 
 ```bash

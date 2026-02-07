@@ -56,11 +56,21 @@ See the LICENSE file for full details.
 
 ## Releases
 
-The first public release will be available as:
-
-- **Linux binary**
-- **Flatpak** (for sandboxing enjoyers)
+- **Flatpak** (Linux)
 - **Windows EXE** (for people who still use Windows, please just switch to [Mint](https://linuxmint.com/))
+
+## How to install
+Windows:
+
+Download the latest Windows installer from [here](https://github.com/NotAndrej/oudl/releases/latest) and run it.
+
+---
+Linux:
+1. Make sure Flatpak is installed.
+2. Download the latest .flatpak file from [here](https://github.com/NotAndrej/oudl/releases/latest).
+3. Go to the directory where you downloaded it and run the following command:  
+   `flatpak install --user OUDL_1.0-P.flatpak`
+4. Press `y` to confirm and enjoy!
 
 ## How to build
 

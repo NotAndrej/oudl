@@ -1,0 +1,43 @@
+{
+  "name": "oudl",
+  "version": "1.0.0",
+  "description": "Open-source openfront.io Electron launcher",
+  "homepage": "https://github.com/NotAndrej/oudl",
+  "author": "Not Andrej",
+  "license": "AGPL-3.0",
+  "main": "main.js",
+  "type": "commonjs",
+
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+
+  "dependencies": {
+    "discord-rpc": "^4.0.1",
+    "electron-store": "^11.0.2"
+  },
+
+  "devDependencies": {
+    "electron": "^40.1.0",
+    "electron-builder": "^24.13.3"
+  },
+
+"build": {
+  "appId": "io.oudl",
+  "productName": "OUDL",
+
+  "linux": {
+    "target": ["dir"]
+  },
+
+  "win": {
+    "target": ["nsis"],
+    "icon": "logo.ico"
+  },
+  "nsis": {
+  "oneClick": false,
+  "perMachine": false,
+  "allowToChangeInstallationDirectory": true}
+ }
+}

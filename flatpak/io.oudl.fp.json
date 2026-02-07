@@ -1,0 +1,59 @@
+{
+  "app-id": "io.oudl.fp",
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  "sdk-extensions": ["org.freedesktop.Sdk.Extension.node18"],
+  "build-options": {
+    "append-path": "/usr/lib/sdk/node18/bin"
+  },
+
+  "command": "oudl",
+
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--socket=pulseaudio",
+    "--device=dri",
+    "--share=network",
+    "--filesystem=/etc/localtime:ro",
+    "--socket=session-bus",
+    "--filesystem=xdg-documents",
+    "--env=GTK_THEME=Adwaita:dark",
+    "--env=ELECTRON_DISABLE_SECURITY_WARNINGS=true"
+  ],
+
+  "modules": [
+    {
+      "name": "oudl",
+      "buildsystem": "simple",
+
+      "build-commands": [
+        "mkdir -p /app",
+        "cp -r app/* /app/",
+        "mkdir -p /app/bin",
+        "printf '#!/bin/sh\nexec /app/oudl --force-dark-mode --no-sandbox --disable-gpu-sandbox --disable-setuid-sandbox \"$@\"\n' > /app/bin/oudl",
+        "chmod +x /app/bin/oudl",
+        "install -Dm644 io.oudl.fp.desktop /app/share/applications/io.oudl.fp.desktop",
+        "install -Dm644 io.oudl.fp.png /app/share/icons/hicolor/256x256/apps/io.oudl.fp.png"
+      ],
+
+      "sources": [
+        {
+          "type": "dir",
+          "path": "../dist/linux-unpacked",
+          "dest": "app"
+        },
+        {
+          "type": "file",
+          "path": "io.oudl.fp.desktop"
+        },
+        {
+          "type": "file",
+          "path": "io.oudl.fp.png"
+        }
+      ]
+    }
+  ]
+}

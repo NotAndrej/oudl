@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=OUDL
+Comment=Unofficial OpenFront Desktop Launcher
+Exec=oudl
+Icon=io.oudl.fp
+Terminal=false
+Type=Application
+Categories=Game;
+StartupWMClass=OUDL

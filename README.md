@@ -83,6 +83,7 @@ Guide WIP (sorry)
 ```bash
 git clone https://github.com/NotAndrej/oudl/
 cd oudl
+npm install
 npm start
 ```
 This will give you the latest INDEV build.  
